@@ -1,0 +1,41 @@
+body {
+	font-family: Constania;
+	background-color: #0A3;
+}
+
+h1 {
+	text-align: center;
+	background-color: black;
+	font-family: constania;
+	text-shadow: 1px 1px 6px tomato;
+	color: white;padding: 8px 10px;	
+	border: 1.5px solid white;
+}
+.dtl {
+	background-color: lightgrey;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid tomato;
+	border-width:2;
+	}
+.tbl td{
+	border-width:0;
+}	
+a:hover
+{
+	background-color:tomato;
+	color:lightgrey;
+	text-decoration:none;
+	font-size:20;
+}
+a {
+	color:lightgrey;
+	text-decoration:none;
+	font-size:20;
+}
+.lst,.dclr{
+	text-align:center;
+}
+.nm{
+	text-align:right;
+	width:94%;font-size:10;
+}
