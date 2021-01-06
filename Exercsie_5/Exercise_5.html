@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Exercise_5</title>
+<link rel="stylesheet" type="text/css" href="Ex_5.css">
+<style>
+h5{
+box-shadow:1px 1px 20px white;
+border-radius:40%;
+text-shadow:1px 1px 6px black;
+}
+font{
+color:magenta;
+font-size:25px;
+text-shadow:1px 1px 1 px black;
+text-align:center;
+}
+</style>
+<meta name="viewport" content="width:device-width;initial-scale:1.0;">
+</head>
+<body>
+<h1><marquee id="mrq" scrollamount="8" behavior="alternate" loop="infinite" onmouseover="this.stop()" onmouseout="this.start()" >WELCOME TO THE WORLD OF CSS </marquee><div id="bg"></div><img src="css.jpg">
+<div id="d1"><h5>PROPERTIES OF CSS</h5>
+<h6><marquee scrollamount="5" direction="up" loop="infinite" onmouseover="this.stop()" onmouseout="this.start()" >
+<ul style="margin-left:28px;">
+<li><a href="#" onmouseover="document.getElementById('txt').style.display='block'" onmouseout="document.getElementById('txt').style.display='none'">Text Properties</a></li>
+<li><a href="#" onmouseover="document.getElementById('lst').style.display='block'" onmouseout="document.getElementById('lst').style.display='none'">List Properties</a></li>
+<li><a href="#" onmouseover="document.getElementById('brdr').style.display='block'" onmouseout="document.getElementById('brdr').style.display='none'">Border Properties</a></li>
+<li><a href="#" onmouseover="document.getElementById('fnt').style.display='block'" onmouseout="document.getElementById('fnt').style.display='none'">Font Properties</a></li></ul></h6></marquee></div>
+<div id="d2">
+<p id="txt"><br><font>TEXT PROPERTIES</font><br><br>
+CSS text formatting properties is used to format text and style text.Which include following properties:<br>
+1.Text-color<br>
+2.Text-alignment<br>
+3.Text-decoration<br>
+4.Text-transformation<br>
+5.Text-indentation<br>
+6.Letter spacing<br>
+7.Line height&nbsp;8.Word spacing<br>
+8.Text-direction&nbsp;10.Text-shadow
+</p>
+<p id="lst"><br><font>LIST PROPERTIES</font><br><br>
+The list-style property in CSS is used to set the list style. This property is a combination of three other properties list-style-type, list-style-position, and list-style-image as can be used as a shorthand notation for these three properties.<br>
+
+Syntax:&nbsp;&nbsp;list-style: list-style-type list-style-position list-style-image|initial|inherit;<br>
+Property values:<br>
+
+list-style-type:This value sets the marker (such as a disc, character, or custom counter style) of a list item element.It’s default value is disc.
+list-style-position:This value sets the position of the marker relative to a list item.It’s default value is “outside”.
+list-style-image:This value sets an image to be used as the list item marker. It’s default value is “none”.
+</p>
+<p id="brdr"><br><font>BORDER PROPERTIES</font><br><br>
+The border property in CSS is used to style the border of an element. This property is a combination of three other properties border-width, border-style, and border-color as can be used as a shorthand notation for these three properties. It sets or returns the border-width, border-style, border-color Properties.<br>
+
+Syntax:<br>
+
+border = "width style color|initial|inherit"<br>
+Property Values:<br>
+
+width: This value specifies the weight or the width of the border.
+style: This value specifies a style for the border, that is whether the border will be dotted, dashed, solid etc.
+color: This value specifies the color of the border.
+
+</p>
+<p id="fnt"><br><font>FONT PROPERTIES</font><br><br>
+The font-size property in CSS is used to set the font size of text in HTML document.<br>
+
+Syntax:<br>
+
+font-size: medium|xx-small|x-small|small|large|x-large
+           |xx-large|smaller|larger|length|initial|inherit;<br>
+Property Values:<br>
+
+absolute-size: The absolute-size is used to set the font size absolutely. The default value of absolute-size is medium. The list of absolute-size property are xx-small, x-small, small, medium, large, x-large, xx-large.<br>
+Syntax:<br>
+
+font-size: medium|xx-small|x-small|small|large|x-large|xx-large;
+
+</p>
+</div></h1>
+</body>
+</html>
+
