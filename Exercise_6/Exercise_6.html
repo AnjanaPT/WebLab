@@ -1,0 +1,273 @@
+<html>
+<head>
+<title>Exercise 6</title>
+<link rel="stylesheet" type="text/css" href="Ex_6.css">
+<meta name="viewport" content="width:device-width;initial-scale:1.0;">
+<script>
+function refresh(id)
+{
+	var ids=["str1","str2","str3","str4","str5","str6","str7","str8","str9","str10","str11","str12","index","math1","math2","math3","math4","math5","math6","math7","math8"];
+	for(var i in ids)
+	{
+		var d=ids[i];
+		if(d!=id)
+			document.getElementById(d).style.display='none';
+	}
+	if(id=='str2' || id=='str3' || id=='str4')
+		document.getElementById('index').style.display='block';
+	if(id=='math7' || id=='math8')
+		document.getElementById('no').style.display='none';
+	else
+		document.getElementById('no').style.display='block';
+	document.getElementById(id).style.display='block';
+}
+function string(id)
+{
+	s=document.getElementById('s').value;
+	<!--length-->
+	if(id=='str1'){document.getElementById('len').value=s.length;}
+	<!--indexof-->
+	if(id=='str2'){sr=document.getElementById('isr').value;
+	p=parseInt(document.getElementById('isp').value);
+	document.getElementById('indexOf').value=s.indexOf(sr,p);}
+	<!--lindexOf-->
+	if(id=='str3'){sr=document.getElementById('isr').value;
+	p=parseInt(document.getElementById('lsp').value);
+	document.getElementById('lindexOf').value=s.lastIndexOf(sr,p);}
+	<!--search-->
+	if(id=='str4'){sr=document.getElementById('isr').value;
+	document.getElementById('search').value=s.search(sr);}
+	<!--slice-->						
+	if(id=='str5'){ss=document.getElementById('slsp').value;
+	sl=document.getElementById('sllp').value;
+	document.getElementById('slice').value=s.slice(ss,sl);}
+	<!--substring-->
+	if(id=='str6'){ss=document.getElementById('sub1s').value;
+	sl=document.getElementById('sub1l').value;
+	document.getElementById('substring').value=s.substring(ss,sl);}
+	<!--substr-->
+	if(id=='str7'){ss=document.getElementById('sub2s').value;
+	sl=document.getElementById('sub2l').value;
+	if(sl=="")document.getElementById('substr').value=s.substr(ss);
+	else document.getElementById('substr').value=s.substr(ss,sl);}
+	<!--toLowerCase-->
+	if(id=='str8'){document.getElementById('lower').value=s.toLowerCase();}
+	<!--toUpperCase-->
+	if(id=='str9'){document.getElementById('upper').value=s.toUpperCase();}
+	<!--replace-->
+	if(id=='str10'){st=document.getElementById('rst').value;
+	rs=document.getElementById('rdst').value;
+	document.getElementById('replace').value=s.replace(st,rs);}
+	<!--concate-->
+	if(id=='str11'){s2=document.getElementById('s2').value;
+	document.getElementById('concat').value=s.concat(" ",s2);}
+	<!--split-->	
+	if(id=='str12'){sp=document.getElementById('sp').value;
+	document.getElementById('split').value=s.split(sp);}
+}
+function math(mid)
+{
+	n=document.getElementById('n').value;
+	<!--pow-->
+	if(mid=='math1'){	
+	p=document.getElementById('p').value;
+	document.getElementById('pow').value=Math.pow(n,p);}
+	<!--sqrt-->
+	if(mid=='math2'){	
+	document.getElementById('sqrt').value=Math.sqrt(n);}
+	<!--round-->
+	if(mid=='math3'){	
+	document.getElementById('round').value=Math.round(n);}
+	<!--ceil-->
+	if(mid=='math4'){	
+	document.getElementById('ceil').value=Math.ceil(n);}
+	<!--floor-->
+	if(mid=='math5'){	
+	document.getElementById('floor').value=Math.floor(n);}
+	<!--abs-->
+	if(mid=='math6'){	
+	document.getElementById('abs').value=Math.abs(n);}
+	
+	<!--min and max-->
+	if(mid=='math7'){	
+	set=(document.getElementById('set').value).split(" ");
+	var l=new Array;
+	for(var i in set){
+		l.push(parseFloat(set[i]));
+	}
+	document.getElementById('min').value=Math.min(...l);
+	document.getElementById('max').value=Math.max(...l);}
+	
+	<!--random-->
+	if(mid=='math8'){	
+	document.getElementById('random').value=Math.random();}
+}
+</script>
+</head>
+<body>
+<div id="body"><br>
+<h1><big>J</big>AVA<big>S</big>CRIPT STRING METHODS</h1>
+<div id="str"><br>
+<button onclick="refresh('str1')">length</button></a>
+<button onclick="refresh('str2')">IndexOf</button>
+<button onclick="refresh('str3')">lastIndexOf</button>
+<button onclick="refresh('str4')">search</button>
+<button onclick="refresh('str5')">slice</button>
+<button onclick="refresh('str6')">substring</button>
+<button onclick="refresh('str7')">substr</button>
+<button onclick="refresh('str8')">toLowerCase</button>
+<button onclick="refresh('str9')">toUpperCase</button>
+<button onclick="refresh('str10')">replace</button>
+<button onclick="refresh('str11')">concat</button>
+<button onclick="refresh('str12')">split</button>
+<!--Length-->
+<table><tr height="15px"></tr><tr><th>Enter A String<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="s"></td></tr></table>
+<div id="str1">
+<table><tr>
+<tr><th>Length Of Given String Is </th><td><input type="text" id="len"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str1')" value="GENERATE"></td></tr>
+</tr></table>
+</div>
+<!--indexof-->
+<div id="index">
+<table><tr>
+<th>Enter The Searching String<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="isr"></td></tr>
+</table></div>
+<div id="str2">
+<table><tr>
+<th>Enter A Starting Position<font color="red" size="1.5px"><sup>Optional</sup></font></th><td><input type="text" id="isp"></td></tr>
+<tr><th>Starting Index Of Given Searching String Is </th><td><input type="text" id="indexOf"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str2')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str3">
+<table><tr>
+<th>Enter An Ending Position<font color="red" size="1.5px"><sup>Optional</sup></font></th><td><input type="text" id="lsp"></td></tr>
+<tr><th>LastIndex Of Given Searching String Is </th><td><input type="text" id="lindexOf"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str3')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str4">
+<table><tr>
+<tr><th>Starting Index Of Given Searching String Is </th><td><input type="text" id="search"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str4')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str5">
+<table><tr>
+<th>Enter A Starting Position<font color="red" size="1.5px"><sup>Optional</sup></font></th><td><input type="text" id="slsp"></td></tr>
+<th>Enter An Ending Position<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="sllp"></td></tr>
+<tr><th>The Extracted SubString Is </th><td><input type="text" id="slice"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str5')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str6">
+<table><tr>
+<th>Enter A Starting Position<font color="red" size="1.5px"><sup>Optional</sup></font></th><td><input type="text" id="sub1s"></td></tr>
+<th>Enter An Ending Position<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="sub1l"></td></tr>
+<tr><th>The Extracted SubString Is </th><td><input type="text" id="substring"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str6')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str7">
+<table><tr>
+<th>Enter A Starting Position<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="sub2s"></td></tr>
+<th>Enter The Length Of SubString<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="sub2l"></td></tr>
+<tr><th>The Extracted SubString Is </th><td><input type="text" id="substr"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str7')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str8">
+<table>
+<tr><th>LowerCase Of Given String IS </th><td><input type="text" id="lower"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str8')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str9">
+<table>
+<tr><th>UpperCase Of Given String IS </th><td><input type="text" id="upper"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str9')" value="GENERATE"></td></tr>
+</tr></table></div>
+<div id="str10">
+<table><tr>
+<th>Enter The String To Be Replaced<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="rst"></td></tr>
+<th>Enter The Replacing String<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="rdst"></td></tr>
+<tr><th>Given String After Replacing</th><td><input type="text" id="replace"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str10')" value="GENERATE"></td></tr>
+</table></div>
+<div id="str11">
+<table><tr>
+<th>Enter Another String<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="s2"></td></tr>
+<tr><th>After Concatenation</th><td><input type="text" id="concat"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str11')" value="GENERATE"></td></tr>
+</table></div>
+<div id="str12">
+<table><tr>
+<th>Enter The Separator String<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="sp"></td></tr>
+<tr><th>After Spliting</th><td><input type="text" id="split"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="string('str12')" value="GENERATE"></td></tr>
+</table></div>
+</div><br><br>
+<div id="refresh"><table width="100%"><tr><td colspan="100%"><a onclick="window.location.reload()"><h3>R E F R E S H</h3></a></td></tr></table></div>
+<h1><big>J</big>AVA<big>S</big>CRIPT MATH METHODS</h1>
+<div id="math"><br>
+<button onclick="refresh('math1')">pow</button>
+<button onclick="refresh('math2')">sqrt</button>
+<button onclick="refresh('math3')">round</button>
+<button onclick="refresh('math4')">ceil</button>
+<button onclick="refresh('math5')">floor</button>
+<button onclick="refresh('math6')">abs</button>
+<button onclick="refresh('math7')" style="width:150px;">min and max</button>
+<button onclick="refresh('math8')">random</button>
+
+<div id="no"><table><tr height="15px"></tr><tr><th>Enter A Number<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="number" id="n"></td></tr></table></div>
+<!--pow-->
+<div id="math1">
+<table><tr>
+<tr><th>Enter The Power<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="number" id="p"></td></tr>
+<tr><th>To The Power Of Given Number Is </th><td><input type="number" id="pow"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math1')" value="GENERATE"></td></tr>
+</tr></table></div>
+<!--sqrt-->
+<div id="math2">
+<table>
+<tr><th>Square Root Of Given Number Is </th><td><input type="number" id="sqrt"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math2')" value="GENERATE"></td></tr>
+</tr></table></div>
+<!--round-->
+<div id="math3">
+<table>
+<tr><th>Rounded Value Of Given Number Is </th><td><input type="number" id="round"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math3')" value="GENERATE"></td></tr>
+</tr></table></div>
+<!--ceil-->
+<div id="math4">
+<table><tr>
+<tr><th>Ceil Value Of Given Number Is </th><td><input type="number" id="ceil"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math4')" value="GENERATE"></td></tr>
+</tr></table></div>
+<!--floor-->
+<div id="math5">
+<table><tr>
+<tr><th>Floor Value Of Given Number Is </th><td><input type="number" id="floor"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math5')" value="GENERATE"></td></tr>
+</tr></table></div>
+<!--sqrt-->
+<div id="math6">
+<table>
+<tr><th>Absolute Value Of Given Number Is </th><td><input type="number" id="abs"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math6')" value="GENERATE"></td></tr>
+</tr></table></div>
+<!--min and max-->
+<div id="math7">
+<table>
+<tr height="30px"></tr><tr><th>Enter A Set Of Numbers Separated By Space<font color="red" size="1.5px"><sup>*</sup></font></th><td><input type="text" id="set"></td></tr>
+<tr><th>Minimum Value In The Given Numbers Is </th><td><input type="number" id="min"></td></tr>
+<tr><th>Maximum Value In The Given Numbers Is </th><td><input type="number" id="max"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math7')" value="GENERATE"></td></tr>
+</table></div>
+<!--random-->
+<div id="math8">
+<table>
+<tr height="60px"><th style="text-align:right;">Random Value Is </th><td><input type="text" id="random"></td></tr>
+<tr><td colspan="100%" id="sub"><input type="submit" onclick="math('math8')" value="GENERATE"></td></tr>
+</table></div>
+
+</div>
+<br><br>
+</div>
+</body>
+</html>

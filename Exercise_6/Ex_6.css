@@ -1,0 +1,89 @@
+body{
+	font-family:constania;
+}
+h1{
+	letter-spacing:2px;
+	word-spacing:5px;
+	text-shadow:1px 1px 6px black;
+	color:white;
+	text-align:center;
+}
+#body{
+	width:97%;
+	margin-left:20px;
+	margin-top:25px;
+	background-color:gray;
+	margin-bottom:20px;
+}
+#str,#math{
+	height:60%;
+	width:60%;
+	margin-top:20px;
+	margin-left:20%;
+	background-color:lightgray;
+	text-align:center;
+}
+hr{
+	width:100%;
+}
+#str button,#math button{
+	background-color:black;
+	height:30px;border:1.5px solid tomato;
+	float:left;
+	margin-top:5px;
+	letter-spacing:1px;
+	font:20px constania;
+	color:white;
+}
+#str button{
+	width:150px;margin-left:20px;
+}
+#math button{
+	width:75px;margin-left:5px;margin-top:30px;margin-bottom:30px;
+}
+#str1,#index,#str2,#str3,#str4,#str5,#str6,#str7,#str8,#str9,#str10,#str11,#str12,
+#math1,#math2,#math3,#math4,#math5,#math6,#math7,#math8{
+	display:none;
+}
+#refresh h3{
+	height:30px;text-align:center;
+	background-color:black;
+	color:white;margin-left:0px;
+	border-width:0;letter-spacing:2px;
+	border-radius:50%;box-shadow:1px 1px 10px white;
+}
+#refresh table{
+	margin-left:0px;width:100%;
+}
+#math tr{
+	margin-top:200px;
+}
+table{
+	margin-left:10%;
+	width:580px;
+}
+td{
+	text-align:right;
+}
+th{
+	text-align:left;
+}
+#sub{
+	text-align:center;
+}
+input[type=submit]{
+	background-color:green;
+	color:white;letter-spacing:5px;
+	border:2px solid white;
+	width:125px;height:25px;
+	font:15px bold constania;
+	margin-top:15px;
+}
+input[type=submit]:hover{
+	background-color:white;
+	color:green;
+}
+input[type=text],input[type=number]{
+	border:2px solid gray;
+	width:250px;height:25px;
+}
