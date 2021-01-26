@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Exercise 7</title>
+<link rel="stylesheet" type="text/css" href="Ex_7.css">
+<meta name="viewport" content="width:device-width;initial-scale:1.0;">
+</head>
+<body>
+<script>
+function calender()
+{
+yr=parseInt(document.getElementById('year').value);
+for(var mn=0;mn<12;mn++){
+var cl="<table width='365px' height='200px' border='2' cellspacing:'10px' cellpadding:'10px' style='background-color:white;text-align:center;font-size:20px;border-collapse:collapse;' ><tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>";
+var dt=new Date(yr,mn);
+var day=dt.getDay();
+for(var i=0;i<day;i++)
+{
+	cl+="<td></td>";
+}
+while(dt.getMonth()==mn)
+{
+	cl+="<td>"+dt.getDate()+"</td>";
+	if(dt.getDay()%7==6)
+	{
+		cl+="</tr><tr>";
+	}
+	dt.setDate(dt.getDate()+1);
+}
+var d=dt.getDay();
+for(var i=d;i%7!=0;i++)
+{
+	cl+="<td></td>";
+}
+cl+="</tr></table>";
+var m=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"];
+document.getElementById('calender').style.display='block';
+document.getElementById('m'+mn).innerHTML=m[mn]+"  "+yr;
+document.getElementById('y').innerHTML=yr;
+document.getElementById('c'+mn).innerHTML=cl;
+}
+}
+</script>
+<div id="cal"><br>
+<div id="ip"><br>
+<input type="number" id="year" placeholder="Enter The Year"><br><br>
+<button onclick="calender()">G E N E R A T E</button><input type="reset" value="C L E A R" onclick="window.location.reload();"><br>
+<p id="y" style="text-align:center;font-size:40px;color:red;font-style:bold;"></p><br>
+</div><br><br>
+<table id="calender" style="display:none;"><tr><td>
+<table id="months" cellpadding="15%" cellspacing="15%" border="2">
+<tr><td><p id="m0"></p></td><td><p id="m1"></p></td><td><p id="m2"></p></td></tr>
+<tr><td><p id="c0"></td><td></p><p id="c1"></p></td><td><p id="c2"></p></td></tr>
+<tr><td><p id="m3"></p></td><td><p id="m4"></p></td><td><p id="m5"></p></td></tr>
+<tr><td><p id="c3"></p></td><td><p id="c4"></p></td><td><p id="c5"></p></td></tr>
+<tr><td><p id="m6"></p></td><td><p id="m7"></p></td><td><p id="m8"></p></td></tr>
+<tr><td><p id="c6"></p></td><td><p id="c7"></p></td><td><p id="c8"></p></td></tr>
+<tr><td><p id="m9"></p></td><td><p id="m10"></p></td><td><p id="m11"></p></td></tr>
+<tr><td><p id="c9"></p></td><td><p id="c10"></p></td><td><p id="c11"></p></td></tr></table><br>
+</td></tr></table>
+</div>
+</body>
+</html>
+
+
+
+<!--switch(mn)
+{
+	case 0:m="January";break;
+	case 1:m="February";break;
+	case 2:m="March";break;
+	case 3:m="April";break;
+	case 4:m="May";break;
+	case 5:m="June";break;
+	case 6:m="July";break;
+	case 7:m="August";break;
+	case 8:m="September";break;
+	case 9:m="October";break;
+	case 10:m="November";break;
+	case 11:m="December";break;
+}-->

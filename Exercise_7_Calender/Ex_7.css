@@ -1,0 +1,66 @@
+body{
+	font-family:constania;
+}
+#ip{
+	height:30%;
+	width:50%;
+	margin-top:20px;
+	margin-left:25%;
+	background-color:lightgray;
+	text-align:center;
+}
+input[type=number]{
+	width:250px;
+	height:25px;
+}
+#cal{
+	background-color:gray;
+	margin-top:35px;
+	margin-left:1%;
+	width:98%;
+}
+input[type=reset]{
+	background-color:tomato;width:70px;
+}
+button{
+	background-color:teal;
+	margin-right:11%;width:110px;
+}
+button:hover{
+	background-color:white;
+	color:teal;
+}
+input[type=reset]:hover{
+	background-color:white;
+	color:tomato;
+}
+button,input[type=reset]{
+	border-width:0;
+	height:20px;
+	color:white;
+	font-family:constania;
+}
+th{
+	color:black;
+	letter-spacing:1px;
+}
+#m0,#m1,#m2,#m3,#m4,#m5,#m6,#m7,#m8,#m9,#m10,#m11{
+	text-align:center;
+	font-size:30px;
+	text-shadow:1px 1px 6px black;
+	color:white;
+	font-style:bold;
+}
+#months{
+	height:50%;
+	width:100%;
+	margin-top:35px;
+	margin-left:10px;
+	text-align:center;
+	border-collapse:collapse;
+	border-color:white;
+	font-size:25px;
+	font-style:bold;
+}
+
+
