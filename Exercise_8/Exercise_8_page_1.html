@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Exercise_8_Form Validation</title>
+<link rel="stylesheet" type="text/css" href="Ex_8.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script>
+function Reg()
+{
+	var name=document.frm.name;
+	var age=document.frm.age;
+	var gen=document.frm.gender;
+	var pwd=document.frm.pwd;
+	var rpwd=document.frm.rpwd;
+	var email=document.frm.email;
+	var mno=document.frm.mno;
+	if(name.value==""){
+		alert("Please Enter Your Name ");
+		name.focus();
+		return false;
+	}
+	var n=/^[A-Za-z ]+$/;
+	if(!name.value.match(n) || name.value.lenth>20 || name.value.length<2)
+	{
+		alert("Please Enter A Valid Name");
+		name.focus();
+		return false;
+	}
+	if(age.value=="none"){
+		alert("Please Select Your Age ");
+		age.focus();
+		return false;
+	}
+	if(gen.value==""){
+		alert("Please Select Your Gender ");
+		name.focus();
+		return false;
+	}
+	if(pwd.value.length==0 || pwd.value==""){
+		alert("Please Enter Your Password ");
+		pwd.focus();
+		return false;
+	}
+	var pu=pwd.value.toUpperCase();
+	var pl=pwd.value.toLowerCase();
+	var pn=/\d+/;
+	if(pu==pwd.value){
+		alert("Password Must Contain Atleast One LowerCase Letter ");
+		pwd.focus();
+		return false;
+	}
+	if(!pwd.value.match(pn)){
+		alert("Password Must Contain Atleast One Digit ");
+		pwd.focus();
+		return false;
+	}
+	if(pl==pwd.value){
+		alert("Password Must Contain Atleast One UpperCase Letter ");
+		pwd.focus();
+		return false;
+	}
+	if(rpwd.value.length==0 || pwd.value==""){
+		alert("Please Retype Your Password ");
+		rpwd.focus();
+		return false;
+	}
+	if(rpwd.value!=pwd.value){
+		alert("Password Not Match.Retype Correct Password ");
+		rpwd.focus();
+		return false;
+	}
+	if(email.value.length==0 || email.value==""){
+		alert("Please Enter Your Email Id ");
+		email.focus();
+		return false;
+	}
+	if(email.value.indexOf("@",0)<0 || email.value.indexOf(".com",0)<0)
+	{
+		alert("Please enter a valid email_id");
+		email.focus();
+		return false;
+	}
+	if(mno.value==""){
+		alert("Please Enter Your Phone Number ");
+		mno.focus();
+		return false;
+	}
+	var no=/^\d{10}$/;
+	if(!mno.value.match(no) || mno.value.length!=10)
+	{
+		alert("Please Enter A Valid Phone Number");
+		mno.focus();
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body topmargin="10px" leftmargin="20px" rightmargin="20px" bottommargin="20px">
+<div class="body">
+<h1><marquee scrollamount="5" behavior="alternate" loop="infinite" onmouseover="this.stop()" onmouseout="this.start()" >REGISTER HERE !!!</marquee></h1>
+<form name="frm"  action="Exercise_8_page_2.html" onsubmit="return Reg()" method="post">
+<table align="center" border="5" cellpadding="10px">
+<tr><td>Name</td><td colspan="100%"><input type="text" name="name" placeholder="Enter Your Name"></td></tr>
+<tr><td>Age</td><td colspan="100%"><select name="age">
+<option value="none">---------------Select---------------</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option></select></td></tr>
+<tr><td>Gender</td><td colspan="100%">Male <input type="radio" name="gender" value="m"> Female <input type="radio" name="gender" value="f"> Others <input type="radio" name="gender" value="o"></td></tr>
+<tr><td>Password</td><td colspan="100%"><input type="password" name="pwd" placeholder="Enter Your Password"></td></tr>
+<tr><td>Re-enter Password</td><td colspan="100%"><input type="password" name="rpwd" placeholder="Re-enter Password"></td></tr>
+<tr><td>Email Id</td><td colspan="100%"><input type="text" name="email" placeholder="Enter Your Email"></td></tr>
+<tr><td>Phone Number</td><td colspan="100%"><input type="number" name="mno" placeholder="Enter Your Phone Number"></td></tr>
+<tr height="50px"><td colspan="100%"><input type="reset" name="reset" value="CLEAR"><input type="submit" name="submit" value="SUBMIT"></td></tr>
+</table></form>
+<br>
+</div></body>
+</html>

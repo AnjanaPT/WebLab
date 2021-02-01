@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Exercise_10</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<table border="1" style="text-align:center;margin-left:18%;margin-right:10%;margin-top:5%;box-shadow:1px 1px 20px 10px black;"><tr><td><img style="width:800px;height:400px;" id="img1" src="Web_1.png"><br>
+<h2 id="h" style="text-shadow:1px 3px 3px black;color:teal;">It Will Change When You Hover..Give It A Try!!!</h2>
+</td></tr></table><br><br>
+<script>
+document.getElementById("img1").addEventListener("mouseover",mouseOver);
+document.getElementById("img1").addEventListener("mouseout",mouseOut);
+function mouseOver()
+{
+document.getElementById("img1").src="Web_2.png";
+document.getElementById("h").style.color='red';
+document.getElementById("h").innerHTML="What Happens When You Move The Mouse Away From It.Try That Too!!!";
+}
+function mouseOut()
+{
+document.getElementById("img1").src="Web_1.png";
+document.getElementById("h").style.color='teal';
+document.getElementById("h").innerHTML="It Will Change When You Hover..Give It A Try!!!";
+}
+</script>
+</body>
+</html>
+

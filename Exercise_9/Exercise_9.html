@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Exercise_9</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<button id="btn" style="color:white;box-shadow:1px 1px 5px 5px  white;background-color:black;margin-left:40%;margin-top:20%;margin-right:45%;width:130px;height:25px;font:15px constania;"><b><big>C</big>LICK <big>M</big>E!!!!</b></button><br>
+<script>
+document.getElementById("btn").addEventListener("click",bgcolor);
+function bgcolor(){
+var random="#";
+for(var i=0;i<6;i++){
+	random+=Math.floor(Math.random()*10);
+}
+document.body.style.backgroundColor=random;
+}
+</script>
+</body>
+</html>
