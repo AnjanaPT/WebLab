@@ -1,0 +1,41 @@
+.body{
+	background-color:black;
+	font-family:constania;
+}
+h1{
+	color:teal;
+	text-shadow: 1px 1px 10px gray;
+	font-size:35px;
+	padding-top:15px;
+	padding-bottom:5px;
+	letter-spacing:10px;
+	background-color:white
+}
+table{
+	width:60%;
+	height:75%;
+	color:white;
+	font-size:20px;
+	margin-top:40px;
+}
+select,input[type=text],[type=password],[type=number],[type=email]{
+	width:200px;
+	height:30px;
+	font-family:constania;
+}
+input[type=submit]{
+	margin-left:55%;
+}
+input[type=reset],input[type=submit]{
+	background-color:#0A3;
+	font-family:constania;
+	color:white;
+	font-size:20px;
+	letter-spacing:5px;width:150px;
+	height:30px;
+	font-family:constania;
+}
+input[type=reset]:hover,input[type=submit]:hover{
+	background-color:white;
+	color:green;
+}
